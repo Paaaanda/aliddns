@@ -55,7 +55,7 @@ def func():
 		# 当前解析ip
 		netip = getParsingRecords()
 		if locip != netip:
-			#editParsingRecords(locip)
+			editParsingRecords(locip)
 		else:
 			ylog('ip相同')
 	except Exception as ex:
