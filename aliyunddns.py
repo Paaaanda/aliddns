@@ -14,8 +14,8 @@ recordId = 'recordId'
 
 
 def ylog(m):
-	t = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-	print(t+':'+m)
+    t = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    print(t+':'+m)
 	
 def operate():
     url = 'http://www.3322.org/dyndns/getip'
@@ -46,19 +46,19 @@ def editParsingRecords(ip):
 
 
 def func():
-	try:
-		# 当前ip
-		locip = operate()
-		# 当前解析ip
-		netip = getParsingRecords()
-		if locip != netip:
-			editParsingRecords(locip)
-		else:
-			ylog('ip相同')
-	except Exception as ex:
-		print("出现如下异常%s"%ex)
-	else:
-		pass
+    try:
+        # 当前ip
+        locip = operate()
+        # 当前解析ip
+        netip = getParsingRecords()
+        if locip != netip:
+            editParsingRecords(locip)
+        else:
+            ylog('ip相同')
+    except Exception as ex:
+        print("出现如下异常%s"%ex)
+    else:
+        pass
 
 
 def tasklist():
