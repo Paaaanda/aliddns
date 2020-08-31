@@ -9,7 +9,7 @@ from aliyunsdkalidns.request.v20150109.DescribeDomainRecordInfoRequest import De
 from aliyunsdkalidns.request.v20150109.UpdateDomainRecordRequest import UpdateDomainRecordRequest
 from json import loads
 
-client = AcsClient('AccessKey ID','	AccessKey Secret', 'cn-hangzhou')
+client = AcsClient('AccessKey ID','AccessKey Secret', 'cn-hangzhou')
 recordId = 'recordId'
 
 
@@ -43,9 +43,6 @@ def editParsingRecords(ip):
     request.set_Value(ip)
     response = client.do_action_with_exception(request)
     ylog(str(response, encoding='utf-8'))
-    # python2:  print(response)
-    # t = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-	# print(t + ":" + str(response, encoding='utf-8'))
 
 
 def func():
